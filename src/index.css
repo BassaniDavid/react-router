@@ -1,4 +1,4 @@
-ul {
+nav ul {
     display: flex;
     gap: 20px;
     font-weight: 800;
@@ -15,11 +15,37 @@ ul li a {
     padding: 10px 20px;
     text-decoration: none;
     color: black;
-    border: 2px solid black;
+    border: 1px solid grey;
     border-radius: 10px;
 }
 
 .active {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(48, 48, 48);
+    color: greenyellow;
+}
+
+.container-posts li {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 40px;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.container-posts h3 {
+    margin: 5px;
+}
+
+.container-posts .title {
+    font-size: 1.3em;
+}
+
+.container-posts p {
+    margin: 5px;
+}
+
+
+
+h1 {
+    margin: 40px;
 }
