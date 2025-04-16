@@ -1,9 +1,11 @@
+// importo gli elementi da react-router per utilizzare NavLink(Link con classe active ) e outlet
 import { Outlet, NavLink } from "react-router-dom";
 
 
 export default function DefaultLayout() {
     return (
         <>
+            {/* navbar */}
             <nav>
                 <ul>
                     <li>
@@ -18,6 +20,7 @@ export default function DefaultLayout() {
                 </ul>
             </nav>
 
+            {/* elemento che verrà sostituito da ciò che è presente nelle varie pagine */}
             <Outlet />
         </>
 
