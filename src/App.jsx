@@ -2,35 +2,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // importo le pagine
-import Posts from './routes/posts'
-import WhoWeAre from './routes/WhoWeAre'
-import Homepage from './routes/Homepage'
+import Posts from './pages/posts'
+import WhoWeAre from './pages/WhoWeAre'
+import Homepage from './pages/Homepage'
 
 // importo Layout
 import DefaultLayout from './layouts/DefaultLayout'
 
-// importo axios
-import axios from 'axios'
-
-// importo useState e useEffect per la chiamata axios
-import { useEffect, useState } from 'react'
-
-
 function App() {
-
-  // creo variabile dinamica per i post 
-  const [posts, setPosts] = useState([])
-
-  // effettuo la chiamata axios
-  function fetchPosts() {
-    axios.get("https://jsonplaceholder.typicode.com/posts")
-
-      // salvo la risposta in posts
-      .then(res => setPosts(res.data))
-  }
-
-  // attivo useEffect in modo che qunado si carichi la pagina, invii la chiamata
-  useEffect(fetchPosts, [])
 
   // da qui in poi è ciò che visualizzo in pagina
   return (
@@ -44,7 +23,7 @@ function App() {
           <Route index element={<Homepage />} />
 
           {/* posts. passo come props l array risposta della chiamata axios*/}
-          <Route path="posts" element={<Posts posts={posts} />} />
+          <Route path="posts" element={<Posts />} />
 
           {/* chi siamo */}
           <Route path="chi-siamo" element={<WhoWeAre />} />
