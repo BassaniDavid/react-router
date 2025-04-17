@@ -44,8 +44,18 @@ ul li a {
     margin: 5px;
 }
 
-
-
 h1 {
     margin: 40px;
+}
+
+.error {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.error button {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: white;
 }

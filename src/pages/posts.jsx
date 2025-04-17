@@ -4,6 +4,9 @@ import axios from 'axios'
 // importo useState e useEffect per la chiamata axios
 import { useEffect, useState } from 'react'
 
+// importo l elemento Link da react
+import { Link } from 'react-router-dom'
+
 
 export default function Posts() {
 
@@ -16,6 +19,9 @@ export default function Posts() {
 
             // salvo la risposta in posts
             .then(res => setPosts(res.data))
+
+            // in caso di errore
+            .catch(err => console.error(err))
 
     }
 
@@ -33,7 +39,9 @@ export default function Posts() {
                     <li key={post.id}>
                         <h3>post numero {post.id}</h3>
                         <h3 className="title">titolo: {post.title}</h3>
-                        <p>{post.body}</p>
+                        <Link to={`/posts/${post.id}`}>
+                            clicca qui per i dettagli
+                        </Link>
                     </li>
                 ))}
             </ul>

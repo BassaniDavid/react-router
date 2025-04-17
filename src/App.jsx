@@ -5,9 +5,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Posts from './pages/posts'
 import WhoWeAre from './pages/WhoWeAre'
 import Homepage from './pages/Homepage'
+import NoPage from './pages/NoPage'
 
 // importo Layout
 import DefaultLayout from './layouts/DefaultLayout'
+
+import SinglePost from './pages/SinglePost'
 
 function App() {
 
@@ -22,13 +25,17 @@ function App() {
           {/* homepage */}
           <Route index element={<Homepage />} />
 
-          {/* posts. passo come props l array risposta della chiamata axios*/}
+          {/* posts. */}
           <Route path="posts" element={<Posts />} />
+
+          {/* posts con rotta dinamica*/}
+          <Route path="posts/:id" element={<SinglePost />} />
 
           {/* chi siamo */}
           <Route path="chi-siamo" element={<WhoWeAre />} />
 
         </Route>
+        <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
   )
