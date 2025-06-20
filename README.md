@@ -1,4 +1,5 @@
-## progetto: Creare il frontend del nostro Blog e le sue pagine
+# React blog pages
+## progetto: Creare il frontend di un Blog e le sue pagine
 
 ### giorno 1
 1. installare React Router DOM: 
